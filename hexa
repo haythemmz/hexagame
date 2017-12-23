@@ -1,0 +1,28 @@
+    pygame.draw.line(gameDisplay,red,a,b,1)
+    pygame.draw.line(gameDisplay, red, b, c, 1)
+    pygame.draw.line(gameDisplay, red, c, d, 1)
+    pygame.draw.line(gameDisplay, red, d, e, 1)
+    pygame.draw.line(gameDisplay, red, e, f, 1)
+    pygame.draw.line(gameDisplay, red, f, g, 1)
+    pygame.draw.line(gameDisplay, red, g, h, 1)
+    pygame.draw.line(gameDisplay, red, h, a, 1)
+
+
+
+
+
+
+        for i in range(0, 11):
+        l.append([2 * 10 * i, 10])
+        m.append([2 * i * 10+10, 0])
+        pygame.draw.line(gameDisplay, red, tuple(l[i]), tuple(m[i]), 1)
+        n.append([2 * 10 * i, 20])
+        p.append([2 * i * 10 + 10, 30])
+        pygame.draw.line(gameDisplay, red, tuple(n[i]), tuple(p[i]), 1)
+
+    for i in range(0, len(m) - 1):
+        pygame.draw.line(gameDisplay, red, tuple(m[i]), tuple(l[i + 1]), 1)
+    for i in range(0, len(p) - 1):
+        pygame.draw.line(gameDisplay, red, tuple(p[i]), tuple(n[i + 1]), 1)
+    for i in range(0,11):
+        pygame.draw.line(gameDisplay, red, (i*20,10), (i*20,20), 1)
